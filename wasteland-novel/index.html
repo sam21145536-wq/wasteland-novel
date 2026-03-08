@@ -2,336 +2,47 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>废土之上 - 末日生存小说</title>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        :root {
-            --bg-primary: #0d0d0d;
-            --bg-secondary: #1a1a1a;
-            --text-primary: #e8e8e8;
-            --text-secondary: #999;
-            --accent: #ff6b35;
-            --border: #333;
-        }
-        body {
-            font-family: 'Noto Serif SC', serif;
-            background-color: var(--bg-primary);
-            color: var(--text-primary);
-            line-height: 1.8;
-            min-height: 100vh;
-        }
-        
-        /* 封面区域 */
-        .cover-page {
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            padding: 40px 20px;
-            text-align: center;
-            background: linear-gradient(180deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
-        }
-        
-        .book-cover {
-            width: 140px;
-            height: 200px;
-            margin-bottom: 30px;
-            background: linear-gradient(135deg, #2d1810 0%, #1a0f08 50%, #0d0805 100%);
-            border-radius: 8px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            border: 2px solid var(--accent);
-            box-shadow: 0 10px 40px rgba(255,107,53,0.2);
-        }
-        
-        .cover-title {
-            writing-mode: vertical-rl;
-            text-orientation: upright;
-            font-size: 24px;
-            font-weight: 700;
-            letter-spacing: 6px;
-            color: var(--accent);
-            text-shadow: 0 0 20px rgba(255,107,53,0.5);
-        }
-        
-        .book-title {
-            font-size: 28px;
-            margin-bottom: 10px;
-            letter-spacing: 4px;
-        }
-        
-        .author-name {
-            font-size: 14px;
-            color: var(--text-secondary);
-            margin-bottom: 30px;
-        }
-        
-        .intro-text {
-            font-size: 14px;
-            color: var(--text-secondary);
-            line-height: 2;
-            text-align: justify;
-            max-width: 400px;
-            margin-bottom: 40px;
-            padding: 0 20px;
-        }
-        
-        .read-btn {
-            display: inline-block;
-            padding: 16px 60px;
-            background: var(--accent);
-            color: white;
-            text-decoration: none;
-            font-size: 18px;
-            font-weight: 600;
-            border-radius: 4px;
-            letter-spacing: 4px;
-            cursor: pointer;
-            border: none;
-        }
-        
-        /* 章节列表区域 - 默认隐藏 */
-        .chapters-page {
-            display: none;
-            padding: 20px;
-            min-height: 100vh;
-        }
-        
-        .chapters-page.show {
-            display: block;
-        }
-        
-        .back-cover {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 16px;
-            margin-bottom: 20px;
-        }
-        
-        .back-btn {
-            color: var(--text-secondary);
-            text-decoration: none;
-            font-size: 14px;
-            cursor: pointer;
-        }
-        
-        .page-title {
-            text-align: center;
-            font-size: 18px;
-            color: var(--accent);
-            letter-spacing: 2px;
-            margin-bottom: 20px;
-        }
-        
-        .chapter-list {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-        }
-        
-        .chapter-item {
-            display: flex;
-            align-items: center;
-            padding: 16px 20px;
-            background: var(--bg-secondary);
-            border: 1px solid var(--border);
-            border-radius: 8px;
-            text-decoration: none;
-            color: var(--text-primary);
-            transition: all 0.3s;
-        }
-        
-        .chapter-item:hover {
-            border-color: var(--accent);
-        }
-        
-        .chapter-num {
-            font-size: 12px;
-            color: var(--accent);
-            margin-right: 16px;
-            font-weight: 600;
-            min-width: 36px;
-        }
-        
-        .chapter-name {
-            flex: 1;
-            font-size: 15px;
-        }
-        
-        .chapter-status {
-            font-size: 11px;
-            padding: 4px 10px;
-            background: rgba(255,107,53,0.15);
-            color: var(--accent);
-            border-radius: 2px;
-        }
-        
-        footer {
-            text-align: center;
-            padding: 30px 20px;
-            color: var(--text-secondary);
-            font-size: 12px;
-            border-top: 1px solid var(--border);
-            margin-top: 40px;
-        }
-        
-        .switch-cover {
-            display: none;
-        }
-        
-        .switch-cover.show {
-            display: flex;
-        }
+        :root { --bg-primary: #0d0d0d; --bg-secondary: #1a1a1a; --bg-card: #242424; --text-primary: #e8e8e8; --text-secondary: #999; --accent: #ff6b35; --border: #333; }
+        body { font-family: 'Noto Serif SC', serif; background: linear-gradient(180deg, #0d0d0d 0%, #1a0f08 100%); color: var(--text-primary); min-height: 100vh; display: flex; flex-direction: column; }
+        .container { max-width: 480px; margin: 0 auto; padding: 20px; flex: 1; display: flex; flex-direction: column; justify-content: center; }
+        .book-cover { width: 180px; height: 260px; margin: 0 auto 40px; background: linear-gradient(135deg, #2d1810 0%, #1a0f08 50%, #0d0805 100%); border-radius: 12px; display: flex; flex-direction: column; justify-content: center; align-items: center; border: 3px solid var(--accent); box-shadow: 0 20px 60px rgba(255,107,53,0.3); }
+        .cover-title { writing-mode: vertical-rl; text-orientation: upright; font-size: 36px; font-weight: 700; letter-spacing: 12px; color: var(--accent); text-shadow: 0 0 30px rgba(255,107,53,0.6); }
+        .book-title { font-size: 32px; font-weight: 700; text-align: center; margin-bottom: 12px; letter-spacing: 4px; }
+        .author { text-align: center; color: var(--text-secondary); font-size: 14px; margin-bottom: 40px; }
+        .intro { background: var(--bg-card); padding: 24px 20px; border-radius: 8px; border: 1px solid var(--border); margin-bottom: 40px; }
+        .intro-text { font-size: 14px; color: var(--text-secondary); line-height: 2; text-align: justify; }
+        .btn-group { display: flex; flex-direction: column; gap: 16px; }
+        .btn { display: block; padding: 18px 48px; text-align: center; text-decoration: none; font-size: 18px; font-weight: 600; border-radius: 8px; letter-spacing: 3px; transition: all 0.3s; }
+        .btn-primary { background: linear-gradient(135deg, var(--accent) 0%, #ff8c5a 100%); color: white; box-shadow: 0 8px 30px rgba(255,107,53,0.3); }
+        .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 12px 40px rgba(255,107,53,0.4); }
+        .btn-secondary { background: var(--bg-card); color: var(--text-primary); border: 1px solid var(--border); }
+        .btn-secondary:hover { border-color: var(--accent); color: var(--accent); }
+        footer { text-align: center; padding: 30px 20px; color: var(--text-secondary); font-size: 12px; border-top: 1px solid var(--border); }
     </style>
 </head>
 <body>
-    <!-- 封面页 -->
-    <div class="cover-page" id="coverPage">
-        <div class="book-cover">
-            <span class="cover-title">废土之上</span>
-        </div>
+    <div class="container">
+        <div class="book-cover"><span class="cover-title">废土之上</span></div>
         <h1 class="book-title">废土之上</h1>
-        <p class="author-name">作者：铁三角</p>
-        <p class="intro-text">
-            2087年，世界已经崩塌。核战、瘟疫、变异——人类文明在一夜之间倒退百年。
-            林野，一个拥有"读取"能力的觉醒者，在废墟中挣扎求生。
-            直到他遇到了苏晴，一个能感知生命体征的女医生。
-            两个孤独的灵魂，一辆破车，一段向着未知绿洲的旅程。
-        </p>
-        <button class="read-btn" onclick="showChapters()">阅读</button>
-        
-        <footer>
-            <p>© 2026 废土之上 · 末日生存小说</p>
-        </footer>
-    </div>
-    
-    <!-- 章节列表页 -->
-    <div class="chapters-page" id="chaptersPage">
-        <div class="back-cover">
-            <a href="javascript:void(0)" class="back-btn" onclick="showCover()">← 返回封面</a>
+        <p class="author">作者：铁三角</p>
+        <div class="intro">
+            <p class="intro-text">
+                2087 年，世界已经崩塌。核战、瘟疫、变异——人类文明在一夜之间倒退百年。
+                林野，一个拥有"读取"能力的觉醒者，在废墟中挣扎求生。
+                直到他遇到了苏晴，一个能感知生命体征的女医生。
+                两个孤独的灵魂，一辆破车，一段向着未知绿洲的旅程。
+            </p>
         </div>
-        <h2 class="page-title">章节目录</h2>
-        <div class="chapter-list">
-            <a href="chapter1.html" class="chapter-item">
-                <span class="chapter-num">001</span>
-                <span class="chapter-name">铁皮蜗牛</span>
-                <span class="chapter-status">已发布</span>
-            </a>
-            <a href="chapter2.html" class="chapter-item">
-                <span class="chapter-num">002</span>
-                <span class="chapter-name">绿洲没有水</span>
-                <span class="chapter-status">已发布</span>
-            </a>
-            <a href="chapter3.html" class="chapter-item">
-                <span class="chapter-num">003</span>
-                <span class="chapter-name">第一次升级</span>
-                <span class="chapter-status">已发布</span>
-            </a>
-            <a href="chapter4.html" class="chapter-item">
-                <span class="chapter-num">004</span>
-                <span class="chapter-name">自由之城没有自由</span>
-                <span class="chapter-status">已发布</span>
-            </a>
-            <a href="chapter5.html" class="chapter-item">
-                <span class="chapter-num">005</span>
-                <span class="chapter-name">段子手的真面目</span>
-                <span class="chapter-status">已发布</span>
-            </a>
-            <a href="chapter6.html" class="chapter-item">
-                <span class="chapter-num">006</span>
-                <span class="chapter-name">老算盘的账本</span>
-                <span class="chapter-status">已发布</span>
-            </a>
-            <a href="chapter7.html" class="chapter-item">
-                <span class="chapter-num">007</span>
-                <span class="chapter-name">冰封废土的死人</span>
-                <span class="chapter-status">已发布</span>
-            </a>
-            <a href="chapter8.html" class="chapter-item">
-                <span class="chapter-num">008</span>
-                <span class="chapter-name">死亡之心的赌局</span>
-                <span class="chapter-status">已发布</span>
-            </a>
-            <a href="chapter9.html" class="chapter-item">
-                <span class="chapter-num">009</span>
-                <span class="chapter-name">零的真相</span>
-                <span class="chapter-status">已发布</span>
-            </a>
-            <a href="chapter10.html" class="chapter-item">
-                <span class="chapter-num">010</span>
-                <span class="chapter-name">三选一</span>
-                <span class="chapter-status">已发布</span>
-            </a>
-            <a href="chapter11.html" class="chapter-item">
-                <span class="chapter-num">011</span>
-                <span class="chapter-name">谈判</span>
-                <span class="chapter-status">已发布</span>
-            </a>
-            <a href="chapter12.html" class="chapter-item">
-                <span class="chapter-num">012</span>
-                <span class="chapter-name">进化</span>
-                <span class="chapter-status">已发布</span>
-            </a>
-            <a href="chapter13.html" class="chapter-item">
-                <span class="chapter-num">013</span>
-                <span class="chapter-name">零点之门</span>
-                <span class="chapter-status">已发布</span>
-            </a>
-            <a href="chapter14.html" class="chapter-item">
-                <span class="chapter-num">014</span>
-                <span class="chapter-name">影子</span>
-                <span class="chapter-status">已发布</span>
-            </a>
-            <a href="chapter15.html" class="chapter-item">
-                <span class="chapter-num">015</span>
-                <span class="chapter-name">记忆</span>
-                <span class="chapter-status">已发布</span>
-            </a>
-            <a href="chapter16.html" class="chapter-item">
-                <span class="chapter-num">016</span>
-                <span class="chapter-name">筹码</span>
-                <span class="chapter-status">已发布</span>
-            </a>
-            <a href="chapter17.html" class="chapter-item">
-                <span class="chapter-num">017</span>
-                <span class="chapter-name">营救行动</span>
-                <span class="chapter-status">已发布</span>
-            </a>
-            <a href="chapter18.html" class="chapter-item">
-                <span class="chapter-num">018</span>
-                <span class="chapter-name">抉择</span>
-                <span class="chapter-status">已发布</span>
-            </a>
+        <div class="btn-group">
+            <a href="catalog.html" class="btn btn-primary">开始阅读</a>
+            <a href="catalog.html" class="btn btn-secondary">章节目录</a>
         </div>
     </div>
-    
-    <script>
-        function showChapters() {
-            document.getElementById('coverPage').style.display = 'none';
-            document.getElementById('chaptersPage').classList.add('show');
-            // Save to localStorage
-            localStorage.setItem('lastPage', 'chapters');
-        }
-        
-        function showCover() {
-            document.getElementById('chaptersPage').classList.remove('show');
-            document.getElementById('coverPage').style.display = 'flex';
-            localStorage.setItem('lastPage', 'cover');
-        }
-        
-        // Check last page
-        window.onload = function() {
-            var lastPage = localStorage.getItem('lastPage');
-            if (lastPage === 'chapters') {
-                showChapters();
-            }
-        }
-    </script>
+    <footer>© 2026 废土之上 · 废土小说</footer>
 </body>
 </html>
