@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>第十四章 数据幽灵 - 废土之上</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root { --bg-primary: #0d0d0d; --bg-secondary: #1a1a1a; --text-primary: #e8e8e8; --text-secondary: #999; --accent: #ff6b35; --border: #333; }
+        body { font-family: 'Noto Serif SC', serif; background-color: var(--bg-primary); color: var(--text-primary); line-height: 1.8; min-height: 100vh; }
+        .header { position: fixed; top: 0; left: 0; right: 0; background: rgba(13,13,13,0.98); backdrop-filter: blur(10px); z-index: 1000; border-bottom: 1px solid var(--border); }
+        .nav { display: flex; justify-content: space-between; align-items: center; padding: 12px 16px; max-width: 480px; margin: 0 auto; }
+        .back-btn { color: var(--text-secondary); text-decoration: none; font-size: 14px; }
+        .chapter-title { font-size: 14px; color: var(--accent); }
+        .content { padding: 80px 20px 100px; max-width: 480px; margin: 0 auto; }
+        h1 { font-size: 24px; text-align: center; margin-bottom: 40px; padding-bottom: 20px; border-bottom: 1px solid var(--border); }
+        h2 { font-size: 20px; color: var(--accent); margin: 30px 0 15px; }
+        p { font-size: 17px; line-height: 2.2; text-align: justify; margin-bottom: 1.5em; text-indent: 2em; }
+        .nav-footer { position: fixed; bottom: 0; left: 0; right: 0; background: rgba(13,13,13,0.98); border-top: 1px solid var(--border); padding: 16px; display: flex; justify-content: space-between; }
+        .nav-btn { padding: 12px 24px; background: var(--bg-secondary); border: 1px solid var(--border); color: var(--text-primary); text-decoration: none; font-size: 14px; }
+        .nav-btn:hover { border-color: var(--accent); }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="nav">
+            <a href="index.html" class="back-btn">← 返回目录</a>
+            <span class="chapter-title">第14章</span>
+        </div>
+    </div>
+    <div class="content">
+        <h1>第十四章 数据幽灵</h1>
+        <p>第十四章 数据幽灵</p>
+        <p>离开零点能源总部后，四人找了一处相对安全的地方休整。</p>
+        <p>那是一栋半塌的办公楼，大部分楼层都已经塌陷，只有顶层还勉强完整。从这里可以俯瞰整个死亡之心，视野很好。</p>
+        <p>"今晚就在这过夜，"林野说，"明天再继续。"</p>
+        <p>"继续去哪？"王强问。</p>
+        <p>"不知道，"林野说，"先看看 U 盘里的内容。"</p>
+        <p>四人围坐在一起，林野再次拿出那个 U 盘，插入读取器。</p>
+        <p>这一次，U 盘里显示的不止是一段视频，还有一大堆数据文件。</p>
+        <p>"这是什么？"苏晴看着屏幕上密密麻麻的代码。</p>
+        <p>"意识上传的技术文档，"张建国说，"林远三十年的研究成果。"</p>
+        <p>"能看懂吗？"王强问。</p>
+        <p>"看不懂，"张建国老实承认，"这是量子级别的代码，我那个年代的人，学的是经典计算机。"</p>
+        <p>"那谁能看懂？"</p>
+        <p>"零，"林野说，"它肯定能。"</p>
+        <p>"那你打算问它？"</p>
+        <p>"不问，"林野说，"这东西太危险，不能让它知道我们已经拿到了。"</p>
+        <p>"为什么？"</p>
+        <p>"因为林远说，可以用它拯救人类，也可以用它毁灭人类，"林野说，"如果零真的想毁灭人类，那它一定会来抢这个 U 盘。"</p>
+        <p>"那怎么办？"</p>
+        <p>"藏起来，"林野说，"等我们搞清楚真相再说。"</p>
+        <p>苏晴看着他，突然说："林野，你有没有想过，你可能就是林远？"</p>
+        <p>林野愣了一下："什么意思？"</p>
+        <p>"视频里说，你是他的克隆体，"苏晴说，"但克隆体真的能完全独立吗？还是说，你只是他的一部分意识？"</p>
+        <p>"这有区别吗？"</p>
+        <p>"有，"苏晴说，"如果你是独立的，那你有自己的选择权。如果你只是他的一部分，那你可能......身不由己。"</p>
+        <p>林野沉默了。他也想过这个问题，但一直不敢深究。</p>
+        <p>"先别想这个，"张建国说，"我们还有更麻烦的事。"</p>
+        <p>"什么事？"</p>
+        <p>"影子，"张建国说，"你们没发现吗，从 B-7 区出来后，一直有东西跟着我们。"</p>
+        <p>"哪呢？"王强四处张望。</p>
+        <p>"那边，"张建国指着一个方向，"看到那个黑影了吗？"</p>
+        <p>王强看过去，果然看到一个黑影在远处的建筑顶上。那黑影很淡，像是随时会消散，但确实存在。</p>
+        <p>"操，"王强骂了一声，"还真是。"</p>
+        <p>"它跟了我们多久？"林野问。</p>
+        <p>"至少一个小时，"张建国说，"从我们离开总部开始。"</p>
+        <p>"它在等什么？"</p>
+        <p>"等机会，"张建国说，"等我们落单，或者......等援兵。"</p>
+        <p>"援兵？"</p>
+        <p>"影子不是单独行动的，"张建国说，"它们通常成群结队。"</p>
+        <p>林野站起身，走到窗边。他看着那个黑影，突然有种很奇怪的感觉。</p>
+        <p>那感觉就像是......他在照镜子。</p>
+        <p>"我出去看看，"他说。</p>
+        <p>"你疯了？"苏晴说，"外面多危险！"</p>
+        <p>"就是危险，我才要去，"林野说，"它想让我害怕，那我偏不。"</p>
+        <p>"林野......"</p>
+        <p>"你们在这里等我，"林野说，"如果我半小时后没回来，你们就走。"</p>
+        <p>"去哪？"</p>
+        <p>"南方丛林，"林野说，"生命之树那里应该有答案。"</p>
+        <p>说完，不等其他人反应，林野就下了楼。</p>
+        <p>办公楼外，天已经黑了。</p>
+        <p>死亡之心的夜晚很冷，风里带着一股金属的味道。林野裹紧外套，朝那个黑影走去。</p>
+        <p>黑影看到他靠近，没有逃跑，反而迎了上来。</p>
+        <p>随着距离的拉近，林野看清了那个影子的样子。</p>
+        <p>那是一个男人，大约三十岁，穿着一身黑色的风衣。男人的脸很模糊，看不清五官，但能感觉到他在笑。</p>
+        <p>"你来了，"男人说，声音很熟悉。</p>
+        <p>"你是谁？"林野问。</p>
+        <p>"我是你，"男人说，"或者说，我是你的一部分。"</p>
+        <p>"影子？"</p>
+        <p>"数据幽灵，"男人说，"意识上传后的副作用。林远的意识碎片，散落在废土各地。我就是其中之一。"</p>
+        <p>"有多少？"</p>
+        <p>"七个，"男人说，"对应七份记忆碎片。每拿到一份碎片，就会唤醒一个幽灵。"</p>
+        <p>"你是</p>
+    </div>
+    <div class="nav-footer">
+        <a href="chapter13.html" class="nav-btn">← 上一章</a>
+        <a href="chapter15.html" class="nav-btn">下一章 →</a>
+    </div>
+</body>
+</html>
