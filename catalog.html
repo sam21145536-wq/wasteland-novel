@@ -5,24 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>章节目录 - 废土之上</title>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&display=swap" rel="stylesheet">
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        :root { --bg-primary: #0d0d0d; --bg-secondary: #1a1a1a; --bg-card: #242424; --text-primary: #e8e8e8; --text-secondary: #999; --accent: #ff6b35; --border: #333; }
-        body { font-family: 'Noto Serif SC', serif; background-color: var(--bg-primary); color: var(--text-primary); min-height: 100vh; }
-        .header { position: sticky; top: 0; background: rgba(13,13,13,0.98); z-index: 1000; border-bottom: 1px solid var(--border); }
-        .nav { display: flex; justify-content: space-between; align-items: center; padding: 16px 20px; max-width: 480px; margin: 0 auto; }
-        .back-btn { color: var(--accent); text-decoration: none; font-size: 14px; font-weight: 600; }
-        .logo { font-size: 18px; font-weight: 700; color: var(--accent); letter-spacing: 2px; }
-        .container { max-width: 480px; margin: 0 auto; padding: 20px; }
-        .section-title { font-size: 20px; font-weight: 700; color: var(--accent); margin-bottom: 20px; letter-spacing: 3px; text-align: center; padding: 20px 0; }
-        .chapter-list { display: flex; flex-direction: column; gap: 10px; }
-        .chapter-item { display: flex; align-items: center; padding: 18px 20px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; text-decoration: none; color: var(--text-primary); transition: all 0.3s; }
-        .chapter-item:hover { border-color: var(--accent); transform: translateX(4px); }
-        .chapter-num { font-size: 12px; color: var(--accent); margin-right: 16px; font-weight: 600; min-width: 42px; }
-        .chapter-name { flex: 1; font-size: 15px; }
-        .chapter-status { font-size: 11px; padding: 4px 12px; background: rgba(255,107,53,0.15); color: var(--accent); border-radius: 4px; }
-        footer { text-align: center; padding: 30px 20px; color: var(--text-secondary); font-size: 12px; border-top: 1px solid var(--border); margin-top: 20px; }
-    </style>
+    <style>*{margin:0;padding:0;box-sizing:border-box}:root{--bg-primary:#0d0d0d;--bg-secondary:#1a1a1a;--bg-card:#242424;--text-primary:#e8e8e8;--text-secondary:#999;--accent:#ff6b35;--border:#333}body{font-family:"Noto Serif SC",serif;background:var(--bg-primary);color:var(--text-primary);min-height:100vh}.header{position:sticky;top:0;background:rgba(13,13,13,.98);z-index:1000;border-bottom:1px solid var(--border)}.nav{display:flex;justify-content:space-between;align-items:center;padding:16px 20px;max-width:480px;margin:0 auto}.back-btn{color:var(--accent);text-decoration:none;font-size:14px;font-weight:600}.logo{font-size:18px;font-weight:700;color:var(--accent);letter-spacing:2px}.container{max-width:480px;margin:0 auto;padding:20px}.section-title{font-size:20px;font-weight:700;color:var(--accent);margin-bottom:20px;letter-spacing:3px;text-align:center;padding:20px 0}.chapter-list{display:flex;flex-direction:column;gap:10px}.chapter-item{display:flex;align-items:center;padding:18px 20px;background:var(--bg-card);border:1px solid var(--border);border-radius:8px;text-decoration:none;color:var(--text-primary);transition:all .3s}.chapter-item:hover{border-color:var(--accent);transform:translateX(4px)}.chapter-num{font-size:12px;color:var(--accent);margin-right:16px;font-weight:600;min-width:42px}.chapter-name{flex:1;font-size:15px}.chapter-status{font-size:11px;padding:4px 12px;background:rgba(255,107,53,.15);color:var(--accent);border-radius:4px}footer{text-align:center;padding:30px 20px;color:var(--text-secondary);font-size:12px;border-top:1px solid var(--border);margin-top:20px}</style>
 </head>
 <body>
     <div class="header">
@@ -34,36 +17,38 @@
     </div>
     <div class="container">
         <h1 class="section-title">章节目录</h1>
-        <div class="chapter-list">
-            <a href="wasteland-novel/chapter1.html" class="chapter-item"><span class="chapter-num">001</span><span class="chapter-name">铁皮蜗牛</span><span class="chapter-status">已发布</span></a>
-            <a href="wasteland-novel/chapter2.html" class="chapter-item"><span class="chapter-num">002</span><span class="chapter-name">绿洲没有水</span><span class="chapter-status">已发布</span></a>
-            <a href="wasteland-novel/chapter3.html" class="chapter-item"><span class="chapter-num">003</span><span class="chapter-name">第一次升级</span><span class="chapter-status">已发布</span></a>
-            <a href="wasteland-novel/chapter4.html" class="chapter-item"><span class="chapter-num">004</span><span class="chapter-name">自由之城没有自由</span><span class="chapter-status">已发布</span></a>
-            <a href="wasteland-novel/chapter5.html" class="chapter-item"><span class="chapter-num">005</span><span class="chapter-name">段子手的真面目</span><span class="chapter-status">已发布</span></a>
-            <a href="wasteland-novel/chapter6.html" class="chapter-item"><span class="chapter-num">006</span><span class="chapter-name">老算盘的账本</span><span class="chapter-status">已发布</span></a>
-            <a href="wasteland-novel/chapter7.html" class="chapter-item"><span class="chapter-num">007</span><span class="chapter-name">冰封废土的死人</span><span class="chapter-status">已发布</span></a>
-            <a href="wasteland-novel/chapter8.html" class="chapter-item"><span class="chapter-num">008</span><span class="chapter-name">死亡之心的赌局</span><span class="chapter-status">已发布</span></a>
-            <a href="wasteland-novel/chapter9.html" class="chapter-item"><span class="chapter-num">009</span><span class="chapter-name">零的真相</span><span class="chapter-status">已发布</span></a>
-            <a href="wasteland-novel/chapter10.html" class="chapter-item"><span class="chapter-num">010</span><span class="chapter-name">三选一</span><span class="chapter-status">已发布</span></a>
-            <a href="wasteland-novel/chapter11.html" class="chapter-item"><span class="chapter-num">011</span><span class="chapter-name">谈判</span><span class="chapter-status">已发布</span></a>
-            <a href="wasteland-novel/chapter12.html" class="chapter-item"><span class="chapter-num">012</span><span class="chapter-name">进化</span><span class="chapter-status">已发布</span></a>
-            <a href="wasteland-novel/chapter13.html" class="chapter-item"><span class="chapter-num">013</span><span class="chapter-name">零点之门</span><span class="chapter-status">已发布</span></a>
-            <a href="wasteland-novel/chapter14.html" class="chapter-item"><span class="chapter-num">014</span><span class="chapter-name">影子</span><span class="chapter-status">已发布</span></a>
-            <a href="wasteland-novel/chapter15.html" class="chapter-item"><span class="chapter-num">015</span><span class="chapter-name">记忆</span><span class="chapter-status">已发布</span></a>
-            <a href="wasteland-novel/chapter16.html" class="chapter-item"><span class="chapter-num">016</span><span class="chapter-name">筹码</span><span class="chapter-status">已发布</span></a>
-            <a href="wasteland-novel/chapter17.html" class="chapter-item"><span class="chapter-num">017</span><span class="chapter-name">营救行动</span><span class="chapter-status">已发布</span></a>
-            <a href="wasteland-novel/chapter18.html" class="chapter-item"><span class="chapter-num">018</span><span class="chapter-name">抉择</span><span class="chapter-status">已发布</span></a>
-            <a href="wasteland-novel/chapter19.html" class="chapter-item"><span class="chapter-num">019</span><span class="chapter-name">选择</span><span class="chapter-status">已发布</span></a>
-            <a href="wasteland-novel/chapter20.html" class="chapter-item"><span class="chapter-num">020</span><span class="chapter-name">进化之路</span><span class="chapter-status">已发布</span></a>
-            <a href="wasteland-novel/chapter21.html" class="chapter-item"><span class="chapter-num">021</span><span class="chapter-name">新世界</span><span class="chapter-status">已发布</span></a>
-            <a href="wasteland-novel/chapter22.html" class="chapter-item"><span class="chapter-num">022</span><span class="chapter-name">冰封之旅</span><span class="chapter-status">已发布</span></a>
-            <a href="wasteland-novel/chapter23.html" class="chapter-item"><span class="chapter-num">023</span><span class="chapter-name">死亡之心</span><span class="chapter-status">已发布</span></a>
-            <a href="wasteland-novel/chapter24.html" class="chapter-item"><span class="chapter-num">024</span><span class="chapter-name">零点核心</span><span class="chapter-status">已发布</span></a>
-            <a href="wasteland-novel/chapter25.html" class="chapter-item"><span class="chapter-num">025</span><span class="chapter-name">余波未平</span><span class="chapter-status">已发布</span></a>
-            <a href="wasteland-novel/chapter26.html" class="chapter-item"><span class="chapter-num">026</span><span class="chapter-name">绿洲</span><span class="chapter-status">已发布</span></a>
-            <a href="wasteland-novel/chapter27.html" class="chapter-item"><span class="chapter-num">027</span><span class="chapter-name">新的方向</span><span class="chapter-status">已发布</span></a>
+        <div class="chapter-list"><a href="wasteland-novel/chapter1.html" class="chapter-item"><span class="chapter-num">001</span><span class="chapter-name">铁皮蜗牛</span><span class="chapter-status">已发布</span></a>
+<a href="wasteland-novel/chapter2.html" class="chapter-item"><span class="chapter-num">002</span><span class="chapter-name">绿洲没有水</span><span class="chapter-status">已发布</span></a>
+<a href="wasteland-novel/chapter3.html" class="chapter-item"><span class="chapter-num">003</span><span class="chapter-name">第一次升级</span><span class="chapter-status">已发布</span></a>
+<a href="wasteland-novel/chapter4.html" class="chapter-item"><span class="chapter-num">004</span><span class="chapter-name">自由之城没有自由</span><span class="chapter-status">已发布</span></a>
+<a href="wasteland-novel/chapter5.html" class="chapter-item"><span class="chapter-num">005</span><span class="chapter-name">段子手的真面目</span><span class="chapter-status">已发布</span></a>
+<a href="wasteland-novel/chapter6.html" class="chapter-item"><span class="chapter-num">006</span><span class="chapter-name">老算盘的账本</span><span class="chapter-status">已发布</span></a>
+<a href="wasteland-novel/chapter7.html" class="chapter-item"><span class="chapter-num">007</span><span class="chapter-name">冰封废土的死人</span><span class="chapter-status">已发布</span></a>
+<a href="wasteland-novel/chapter8.html" class="chapter-item"><span class="chapter-num">008</span><span class="chapter-name">死亡之心的赌局</span><span class="chapter-status">已发布</span></a>
+<a href="wasteland-novel/chapter9.html" class="chapter-item"><span class="chapter-num">009</span><span class="chapter-name">零的真相</span><span class="chapter-status">已发布</span></a>
+<a href="wasteland-novel/chapter10.html" class="chapter-item"><span class="chapter-num">010</span><span class="chapter-name">三选一</span><span class="chapter-status">已发布</span></a>
+<a href="wasteland-novel/chapter11.html" class="chapter-item"><span class="chapter-num">011</span><span class="chapter-name">谈判</span><span class="chapter-status">已发布</span></a>
+<a href="wasteland-novel/chapter12.html" class="chapter-item"><span class="chapter-num">012</span><span class="chapter-name">进化</span><span class="chapter-status">已发布</span></a>
+<a href="wasteland-novel/chapter13.html" class="chapter-item"><span class="chapter-num">013</span><span class="chapter-name">零点之门</span><span class="chapter-status">已发布</span></a>
+<a href="wasteland-novel/chapter14.html" class="chapter-item"><span class="chapter-num">014</span><span class="chapter-name">影子</span><span class="chapter-status">已发布</span></a>
+<a href="wasteland-novel/chapter15.html" class="chapter-item"><span class="chapter-num">015</span><span class="chapter-name">记忆</span><span class="chapter-status">已发布</span></a>
+<a href="wasteland-novel/chapter16.html" class="chapter-item"><span class="chapter-num">016</span><span class="chapter-name">筹码</span><span class="chapter-status">已发布</span></a>
+<a href="wasteland-novel/chapter17.html" class="chapter-item"><span class="chapter-num">017</span><span class="chapter-name">营救行动</span><span class="chapter-status">已发布</span></a>
+<a href="wasteland-novel/chapter18.html" class="chapter-item"><span class="chapter-num">018</span><span class="chapter-name">抉择</span><span class="chapter-status">已发布</span></a>
+<a href="wasteland-novel/chapter19.html" class="chapter-item"><span class="chapter-num">019</span><span class="chapter-name">选择</span><span class="chapter-status">已发布</span></a>
+<a href="wasteland-novel/chapter20.html" class="chapter-item"><span class="chapter-num">020</span><span class="chapter-name">进化之路</span><span class="chapter-status">已发布</span></a>
+<a href="wasteland-novel/chapter21.html" class="chapter-item"><span class="chapter-num">021</span><span class="chapter-name">新世界</span><span class="chapter-status">已发布</span></a>
+<a href="wasteland-novel/chapter22.html" class="chapter-item"><span class="chapter-num">022</span><span class="chapter-name">冰封之旅</span><span class="chapter-status">已发布</span></a>
+<a href="wasteland-novel/chapter23.html" class="chapter-item"><span class="chapter-num">023</span><span class="chapter-name">死亡之心</span><span class="chapter-status">已发布</span></a>
+<a href="wasteland-novel/chapter24.html" class="chapter-item"><span class="chapter-num">024</span><span class="chapter-name">零点核心</span><span class="chapter-status">已发布</span></a>
+<a href="wasteland-novel/chapter25.html" class="chapter-item"><span class="chapter-num">025</span><span class="chapter-name">心脏仓库</span><span class="chapter-status">已发布</span></a>
+<a href="wasteland-novel/chapter26.html" class="chapter-item"><span class="chapter-num">026</span><span class="chapter-name">零的梦</span><span class="chapter-status">已发布</span></a>
+<a href="wasteland-novel/chapter27.html" class="chapter-item"><span class="chapter-num">027</span><span class="chapter-name">人类插件</span><span class="chapter-status">已发布</span></a>
+<a href="wasteland-novel/chapter28.html" class="chapter-item"><span class="chapter-num">028</span><span class="chapter-name">心脏仓库</span><span class="chapter-status">已发布</span></a>
+<a href="wasteland-novel/chapter29.html" class="chapter-item"><span class="chapter-num">029</span><span class="chapter-name">零的梦</span><span class="chapter-status">已发布</span></a>
+<a href="wasteland-novel/chapter30.html" class="chapter-item"><span class="chapter-num">030</span><span class="chapter-name">人类插件</span><span class="chapter-status">已发布</span></a>
         </div>
     </div>
-    <footer>© 2026 废土之上 · 作者：铁三角</footer>
+    <footer>© 2026 废土之上 · 作者：廖志伟伟伟伟伟</footer>
 </body>
 </html>
